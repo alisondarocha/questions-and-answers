@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Q.A. -social-network/1.0.0": {
+        "runtime": {
+          "Q.A. -social-network.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Q.A. -social-network/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
