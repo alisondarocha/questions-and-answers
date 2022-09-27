@@ -8,13 +8,9 @@ C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-networ
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-network.AssemblyInfo.cs
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-network.csproj.CoreCompileInputs.cache
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-network.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-network.RazorAssemblyInfo.cache
-C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-network.RazorAssemblyInfo.cs
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\scopedcss\bundle\Q.A. -social-network.styles.css
-C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\scopedcss\projectbundle\Q.A. -social-network.bundle.scp.css
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-network.dll
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\refint\Q.A. -social-network.dll
 C:\Users\Dalva\Desktop\Q.A. -social-network\obj\Debug\net6.0\Q.A. -social-network.pdb

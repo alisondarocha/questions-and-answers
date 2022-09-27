@@ -17,11 +17,6 @@ namespace Q.A.__social_network.Repository
         {
             _context.Add(user);
         }
-        public async Task<IEnumerable<UserModel>> Users()
-        {
-            return await _context.Users.ToListAsync();
-        }
-
         public async Task<UserModel> GetUser(int id)
         {
             return await _context.Users.Where(iduser => iduser.IdUser == id).FirstOrDefaultAsync();

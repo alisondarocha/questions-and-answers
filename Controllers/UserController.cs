@@ -24,16 +24,6 @@ namespace Q.A.__social_network.Controllers
                     ? Ok("Usuario registrado com sucesso.")
                     : BadRequest("Erro ao registrar usuario.");
         }
-
-        [HttpGet]
-        public async Task<IActionResult> Users()
-        {
-            var users = await _repository.Users();
-            return users.Any()
-                    ? Ok(users)
-                    : NoContent();
-        }
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
