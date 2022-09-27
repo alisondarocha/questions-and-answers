@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yZD7USc6+k4l8DyCAk3/b4ShZs7PP2TxHQ+9ngvmnZ8=",
+  "Hash": "VZ5yBPlDoTyVW8Xqm1NqN4MPQ2ZwkTPipd4ilgCZFjo=",
   "Source": "Q.A. -social-network",
   "BasePath": "_content/Q.A. -social-network",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Q.A. -social-network.styles.css",
-      "SourceId": "Q.A. -social-network",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/Q.A. -social-network",
-      "RelativePath": "Q.A. -social-network.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Q.A. -social-network.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Q.A. -social-network.bundle.scp.css",
-      "SourceId": "Q.A. -social-network",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/Q.A. -social-network",
-      "RelativePath": "Q.A. -social-network.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Q.A. -social-network.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\wwwroot\\css\\site.css",
       "SourceId": "Q.A. -social-network",

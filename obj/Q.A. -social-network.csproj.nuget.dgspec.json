@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj": {}
+    "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj": {
+    "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj",
+        "projectUniqueName": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj",
         "projectName": "Q.A. -social-network",
-        "projectPath": "c:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj",
+        "projectPath": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\Q.A. -social-network.csproj",
         "packagesPath": "C:\\Users\\Dalva\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\",
+        "outputPath": "C:\\Users\\Dalva\\Desktop\\Q.A. -social-network\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dalva\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,28 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
