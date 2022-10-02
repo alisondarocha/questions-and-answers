@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Q.A.__social_network.Command;
+using Q.A.__social_network.Commands;
 using Q.A.__social_network.Data;
 using Q.A.__social_network.Models;
 using Q.A.__social_network.Repository;
@@ -18,17 +20,20 @@ namespace Q.A.__social_network.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Register(UserModel user)
-        {
-            _repository.Register(user);
-            return await _repository.SaveChangesAsync()
+        {   
+            var receiver = new UserReceiver(_repository);
+            var createcommand = new CreateUserCommand(receiver, user);
+            createcommand.Execute();
+
+            return await receiver.Save()
                     ? Ok("Usuario registrado com sucesso.")
                     : BadRequest("Erro ao registrar usuario.");
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
-            var user = await _repository.GetUser(id);
-            return user != null
+            var user = _repository.GetUser(id);
+            return await user != null
                     ? Ok(user)
                     : NotFound("Esse usuario não foi encontrado ou não existe");
         }
@@ -39,9 +44,11 @@ namespace Q.A.__social_network.Controllers
             var datauser = await _repository.GetUser(id);
             if (datauser == null) return NotFound("Usuario não foi encontrado ou não existe");
 
-            _repository.Delete(datauser);
+            var receiver = new UserReceiver(_repository);
+            var deletecommand = new DeleteUserCommand(receiver, datauser);
+            deletecommand.Execute();
 
-            return await _repository.SaveChangesAsync()
+            return await receiver.Save()
                     ? Ok("Usuario deletado com sucesso")
                     : NotFound("Erro ao deletar usuario");
         }
