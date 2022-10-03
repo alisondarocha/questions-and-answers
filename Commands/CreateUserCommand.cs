@@ -1,14 +1,14 @@
-using Q.A.__social_network.Commands;
 using Q.A.__social_network.Models;
+using Q.A.__social_network.Repository;
 
-namespace Q.A.__social_network.Command
+namespace Q.A.__social_network.Commands
 {
-    //ConcreteCommand
     public class CreateUserCommand : ICommand
     {    
-        private readonly UserReceiver _repository;
+        private readonly IUserRepository _repository;
         private UserModel _user;
-        public CreateUserCommand (UserReceiver repository, UserModel user)
+
+        public CreateUserCommand (IUserRepository repository, UserModel user)
         {
             _repository = repository;
             _user = user;
@@ -16,6 +16,10 @@ namespace Q.A.__social_network.Command
         public void Execute()
         {
             _repository.Register(_user);
+        }
+        public async Task<bool> Save()
+        {
+            return await _repository.SaveChangesAsync();
         }
     }
 }

@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Q.A.__social_network.Models;
-using System.Linq;
 
 namespace Q.A.__social_network.Data
 {
@@ -11,6 +10,5 @@ namespace Q.A.__social_network.Data
         public Social_NetworkContext(DbContextOptions<Social_NetworkContext> options) : base(options)
         {
         }
-
     }
 }

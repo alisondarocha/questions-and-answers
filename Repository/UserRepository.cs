@@ -1,12 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Q.A.__social_network.Command;
 using Q.A.__social_network.Data;
 using Q.A.__social_network.Models;
-using System.Linq;
     
 namespace Q.A.__social_network.Repository
 {
-    //Receiver
     public class UserRepository : IUserRepository
     {
         private readonly Social_NetworkContext _context;
@@ -15,6 +12,7 @@ namespace Q.A.__social_network.Repository
         {
             _context = context;
         }
+        
         public void Register(UserModel user)
         {
             _context.Add(user);

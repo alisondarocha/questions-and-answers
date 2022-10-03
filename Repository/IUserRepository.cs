@@ -2,7 +2,6 @@ using Q.A.__social_network.Models;
 
 namespace Q.A.__social_network.Repository
 {
-    //Receiver
     public interface IUserRepository 
     {
         void Register (UserModel user);

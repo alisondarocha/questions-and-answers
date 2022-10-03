@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Q.A.__social_network.Command;
 using Q.A.__social_network.Commands;
-using Q.A.__social_network.Data;
 using Q.A.__social_network.Models;
 using Q.A.__social_network.Repository;
 
@@ -21,11 +19,10 @@ namespace Q.A.__social_network.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserModel user)
         {   
-            var receiver = new UserReceiver(_repository);
-            var createcommand = new CreateUserCommand(receiver, user);
+            var createcommand = new CreateUserCommand(_repository, user);
             createcommand.Execute();
 
-            return await receiver.Save()
+            return await createcommand.Save()
                     ? Ok("Usuario registrado com sucesso.")
                     : BadRequest("Erro ao registrar usuario.");
         }
@@ -37,18 +34,16 @@ namespace Q.A.__social_network.Controllers
                     ? Ok(user)
                     : NotFound("Esse usuario não foi encontrado ou não existe");
         }
-
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var datauser = await _repository.GetUser(id);
             if (datauser == null) return NotFound("Usuario não foi encontrado ou não existe");
 
-            var receiver = new UserReceiver(_repository);
-            var deletecommand = new DeleteUserCommand(receiver, datauser);
+            var deletecommand = new DeleteUserCommand(_repository, datauser);
             deletecommand.Execute();
 
-            return await receiver.Save()
+            return await deletecommand.Save()
                     ? Ok("Usuario deletado com sucesso")
                     : NotFound("Erro ao deletar usuario");
         }
