@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Q.A.__social_network.Data;
 using Q.A.__social_network.Models;
-using System.Linq;
     
 namespace Q.A.__social_network.Repository
 {
@@ -13,6 +12,7 @@ namespace Q.A.__social_network.Repository
         {
             _context = context;
         }
+        
         public void Register(UserModel user)
         {
             _context.Add(user);
@@ -21,17 +21,13 @@ namespace Q.A.__social_network.Repository
         {
             return await _context.Users.Where(iduser => iduser.IdUser == id).FirstOrDefaultAsync();
         }
-        
         public void Delete(UserModel user)
         {
             _context.Remove(user);
         }
-
         public async Task<bool> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync() > 0;
         }
-
-        
     }
 }
