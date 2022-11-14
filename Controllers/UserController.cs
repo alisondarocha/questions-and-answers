@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Q.A.__social_network.Commands;
+using Q.A.__social_network.DTO;
 using Q.A.__social_network.Models;
 using Q.A.__social_network.Repository;
 
@@ -17,8 +18,15 @@ namespace Q.A.__social_network.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(UserModel user)
-        {   
+        public async Task<ActionResult> RegisterUser(CreateUserDTO request)
+        {  
+            var user = new UserModel
+            {
+                Name = request.Name,
+                BirthDate = request.BirthDate,
+                Email = request.Email
+            };
+
             var createcommand = new CreateUserCommand(_repository, user);
             createcommand.Execute();
 
@@ -27,17 +35,17 @@ namespace Q.A.__social_network.Controllers
                     : BadRequest("Erro ao registrar usuario.");
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser(int id)
+        public async Task<ActionResult> GetUser(int id)
         {
-            var user = _repository.GetUser(id);
-            return await user != null
+            var user = await _repository.Get(id);
+            return user != null
                     ? Ok(user)
-                    : NotFound("Esse usuario não foi encontrado ou não existe");
+                    : NotFound("Usuario não foi encontrado ou não existe");
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<ActionResult> DeleteUser(int id)
         {
-            var datauser = await _repository.GetUser(id);
+            var datauser = await _repository.Get(id);
             if (datauser == null) return NotFound("Usuario não foi encontrado ou não existe");
 
             var deletecommand = new DeleteUserCommand(_repository, datauser);

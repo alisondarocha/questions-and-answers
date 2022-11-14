@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Q.A.__social_network.Models
 {
@@ -7,13 +9,15 @@ namespace Q.A.__social_network.Models
         [Key]
         public int IdUser { get; set; }
 
-        [Required, MaxLength(100)]
+        [Required, MaxLength(128)]
         public string? Name { get; set; }
 
         [Required]
         public DateTime BirthDate { get; set; }
 
-        [Required, MaxLength(256)]
+        [Required, MaxLength(128)]
         public string? Email { get; set; }
-    }
+        
+        public virtual ICollection<QuestionModel> Questions { get; set; }
+    } 
 }
