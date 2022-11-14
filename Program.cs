@@ -17,7 +17,8 @@ builder.Services.AddDbContext<Social_NetworkContext>(options =>
 );
 });
 
-builder.Services.AddScoped<IUserRepository, UserRepository>();      
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRepositoryQuestion, QuestionRepository>();      
 
 var app = builder.Build();
 

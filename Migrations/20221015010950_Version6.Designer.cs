@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Q.A.__social_network.Data;
 
@@ -10,9 +11,10 @@ using Q.A.__social_network.Data;
 namespace Q.A.__social_network.Migrations
 {
     [DbContext(typeof(Social_NetworkContext))]
-    partial class Social_NetworkContextModelSnapshot : ModelSnapshot
+    [Migration("20221015010950_Version6")]
+    partial class Version6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,6 +31,7 @@ namespace Q.A.__social_network.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Question")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("IdQuestion");
